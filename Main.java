@@ -15,7 +15,7 @@ public class Main {
             count = 1;
             System.out.println("Well, " + name + ", I am thinking of a number between 1 and 20.");
             System.out.println("Take a guess.");
-           
+            try {
                 int userInput = sc.nextInt();
 
                 while (userInput != randomValue) {
@@ -33,10 +33,10 @@ public class Main {
                 System.out.println("Would you like to play again? (y or n)");
                 String playResponse = sc.next();
                 playerPlaying = !(playResponse.startsWith("N") || playResponse.startsWith("n"));
-
+            } catch (InputMismatchException exception) {
                 System.out.println("You entered an Invalid input, please start over!");
                 break;
-
+            }
         }
     }
 }
