@@ -3,8 +3,19 @@ import java.util.Random;
 import java.util.Scanner;
 public class GuessNumber {
     public static void main(String[] args) {
+
+        System.out.println(welcome());
+        System.out.println(playGame());
+    }
+
+    public static String welcome() {
+        return "Hello! What is your name?";
+    }
+
+    public static String playGame() {
+
         Scanner sc = new Scanner(System.in);
-        System.out.println("Hello! What is your name?");
+
         String name = sc.nextLine();
         boolean playerPlaying = true;
 
@@ -38,6 +49,7 @@ public class GuessNumber {
                 break;
             }
         }
+        return "Thank you for playing!";
     }
 }
 
